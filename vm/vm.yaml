@@ -1,0 +1,13 @@
+---
+vms:
+  - vm_name: "testvm01"
+    vm_cpu: 1
+    vm_diskspace: "30G"
+    vm_memory: 4096
+    vm_net: "sina3"
+  - vm_name: "testvm02"
+    vm_cpu: 1
+    vm_diskspace: "30G"
+    vm_memory: 4096
+    vm_net: "lan"    
+   

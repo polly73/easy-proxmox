@@ -1,0 +1,8 @@
+vms:
+  - vm_name: "ollama-srv01"
+    vm_cpu: 8
+    vm_diskspace: "60G"
+    vm_memory: 20480
+    vm_net: "lan"
+    vm_os: "rocky10"
+   

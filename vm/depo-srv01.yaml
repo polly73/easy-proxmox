@@ -1,0 +1,7 @@
+vms:
+  - vm_name: "depo-srv01"
+    vm_cpu: 2
+    vm_diskspace: "1000G"
+    vm_memory: 2048
+    vm_net: "lan"    
+    vm_os: "rocky10"
