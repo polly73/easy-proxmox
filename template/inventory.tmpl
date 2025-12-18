@@ -1,0 +1,4 @@
+[proxmox_vms]
+%{ for name, vm in vms ~}
+${name} ansible_host=${vm.ip} ansible_user=polly
+%{ endfor ~}

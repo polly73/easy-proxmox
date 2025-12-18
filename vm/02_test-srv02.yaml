@@ -1,0 +1,9 @@
+vms:
+  - vm_name: "gitlab-srv02"
+    vm_cpu: 8
+    vm_diskspace: "60G"
+    vm_memory: 4096
+    vm_net: "lan"
+    vm_os: "rocky10"
+    vm_host: "virt4"
+    vm_cpu_type: "x86-64-v4"

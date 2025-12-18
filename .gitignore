@@ -1,0 +1,24 @@
+# Terraform intern
+**/.terraform/*
+.terraform.tfstate.lock.info
+
+# State-Dateien (niemals ins Git)
+*.tfstate
+*.tfstate.*
+
+# Terraform-Variablen mit Secrets
+*.tfvars
+*.auto.tfvars
+
+# Crash-Logs
+crash.log
+crash.*.log
+
+# Plan-Dateien
+*.tfplan
+
+# Lokale Umgebungs-/Config-Dateien
+.terraformrc
+terraform.rc
+.env
+.envrc

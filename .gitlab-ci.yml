@@ -1,0 +1,41 @@
+image:
+  name: ghcr.io/opentofu/opentofu:latest
+  entrypoint: [""]
+
+before_script:
+  - apk add --no-cache ca-certificates openssl
+  - openssl s_client -servername gitlab.home.tinytip.de -connect gitlab.home.tinytip.de:443 -showcerts </dev/null 2>/dev/null | sed -ne '/-BEGIN CERTIFICATE-/,/-END CERTIFICATE-/p' | tee /usr/local/share/ca-certificates/gitlab.crt # accept selfsign certificate of you gitlab instance
+  - update-ca-certificates
+stages:
+  - validate
+  - plan
+  - apply
+
+variables:
+  TF_ROOT_DIR: .
+
+validate:
+  stage: validate
+  script:
+    - cd "$TF_ROOT_DIR"
+    - tofu init -input=false
+    - tofu validate
+
+plan:
+  stage: plan
+  script:
+    - cd "$TF_ROOT_DIR"
+    - tofu init -input=false
+    - tofu plan -out=tfplan
+  artifacts:
+    paths:
+      - ${TF_ROOT_DIR}/tfplan
+      - ${TF_ROOT_DIR}/.terraform/providers/  # Nur Provider-Cache!
+    expire_in: 1 week
+
+apply:
+  stage: apply
+  when: manual
+  script:
+    - cd "$TF_ROOT_DIR"
+    - tofu apply -input=false -auto-approve tfplan
