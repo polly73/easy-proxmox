@@ -32,6 +32,8 @@ No modules.
 | [local_file.ansible_inventory](https://registry.terraform.io/providers/hashicorp/local/latest/docs/resources/file) | resource |
 | [netbox_interface.vm_if](https://registry.terraform.io/providers/e-breuninger/netbox/latest/docs/resources/interface) | resource |
 | [netbox_ip_address.vm_ip](https://registry.terraform.io/providers/e-breuninger/netbox/latest/docs/resources/ip_address) | resource |
+| [netbox_primary_ip.vm_primary_ip](https://registry.terraform.io/providers/e-breuninger/netbox/latest/docs/resources/primary_ip) | resource |
+| [netbox_virtual_disk.vm_disk](https://registry.terraform.io/providers/e-breuninger/netbox/latest/docs/resources/virtual_disk) | resource |
 | [netbox_virtual_machine.vm](https://registry.terraform.io/providers/e-breuninger/netbox/latest/docs/resources/virtual_machine) | resource |
 | [proxmox_vm_qemu.vm](https://registry.terraform.io/providers/telmate/proxmox/latest/docs/resources/vm_qemu) | resource |
 | [random_integer.vm_id](https://registry.terraform.io/providers/hashicorp/random/latest/docs/resources/integer) | resource |
@@ -40,6 +42,9 @@ No modules.
 
 | Name | Description | Type | Default | Required |
 |------|-------------|------|---------|:--------:|
+| <a name="input_gitlab-group"></a> [gitlab-group](#input\_gitlab-group) | gitlab group name -> see credentials.auto.tfvars | `string` | n/a | yes |
+| <a name="input_gitlab-project-id"></a> [gitlab-project-id](#input\_gitlab-project-id) | gitlab project-id -> see credentials.auto.tfvars | `string` | n/a | yes |
+| <a name="input_gitlab-url"></a> [gitlab-url](#input\_gitlab-url) | gitlab tourlken -> see credentials.auto.tfvars | `string` | n/a | yes |
 | <a name="input_gitlab_token"></a> [gitlab\_token](#input\_gitlab\_token) | gitlab token -> see credentials.auto.tfvars | `string` | n/a | yes |
 | <a name="input_gitlab_username"></a> [gitlab\_username](#input\_gitlab\_username) | gitlab username -> see credentials.auto.tfvars | `string` | n/a | yes |
 | <a name="input_netbox_cluster_id"></a> [netbox\_cluster\_id](#input\_netbox\_cluster\_id) | Netbox cluster id -> see credentials.auto.tfvars | `number` | `2` | no |
@@ -67,4 +72,4 @@ No modules.
 | Name | Description |
 |------|-------------|
 | <a name="output_vm_info"></a> [vm\_info](#output\_vm\_info) | Name, IP und VMID aller VMs |
-<!-- END_TF_DOCS --># easy-proxmox
+<!-- END_TF_DOCS -->

@@ -1,4 +1,3 @@
-# create you ansible inventory file relativly too your terraform folder
 locals {
   ansible_vms = {
     for name, vm in proxmox_vm_qemu.vm :

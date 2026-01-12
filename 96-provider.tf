@@ -2,6 +2,7 @@ terraform {
   required_providers {
     proxmox = {
       source = "telmate/proxmox"
+      #    version = "3.0.2-rc03"
       version = " 3.0.2-rc06"
     }
     time = {
@@ -37,6 +38,6 @@ provider "proxmox" {
 
 
 provider "netbox" {
-  server_url = var.netbox_url   # set -> credentials.auto.tfvars
-  api_token  = var.netbox_token # API-Token NetBox set -> credentials.auto.tfvars
+  server_url = var.netbox_url   # z.B. "https://netbox.home.tinytip.de"
+  api_token  = var.netbox_token # API-Token aus NetBox
 }

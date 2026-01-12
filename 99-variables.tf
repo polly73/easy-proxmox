@@ -35,7 +35,18 @@ variable "gitlab_token" {
   description = "gitlab token -> see credentials.auto.tfvars"
 }
 
-
+variable "gitlab-url" {
+  type = string
+  description = "gitlab tourlken -> see credentials.auto.tfvars"
+}
+variable "gitlab-project-id" {
+  type = string
+  description = "gitlab project-id -> see credentials.auto.tfvars"
+}
+variable "gitlab-group" {
+  type = string
+  description = "gitlab group name -> see credentials.auto.tfvars"
+}
 
 #####
 # Variable für Proxmox

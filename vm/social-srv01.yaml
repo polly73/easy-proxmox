@@ -1,0 +1,11 @@
+vms:
+  - vm_name: "social-srv01"
+    vm_cpu: 2
+    vm_diskspace: "250G"
+    vm_memory: 4096
+    vm_net: "dmz"
+    vm_os: "alma10"
+    vm_host: "virt4"
+    vm_cpu_type: "host"
+    vm_domain: "home.tinytip.de"
+  

@@ -1,0 +1,10 @@
+vms:
+  - vm_name: "test-srv03"
+    vm_cpu: 8
+    vm_diskspace: "30G"
+    vm_memory: 2048
+    vm_net: "lan"
+    vm_os: "rocky10"
+    vm_host: "virt4"
+    vm_cpu_type: "x86-64-v4"
+    vm_domain: "home.tinytip.de"
